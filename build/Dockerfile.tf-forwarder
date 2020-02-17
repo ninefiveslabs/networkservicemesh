@@ -1,0 +1,9 @@
+FROM tungstenfabric/contrail-kubernetes-kube-manager:2005
+COPY "*" "/bin/"
+ARG ENTRY
+ENV ENTRY=${ENTRY}
+
+USER root
+ENTRYPOINT ["/bin/sh", "-c"]
+
+CMD ["/bin/${ENTRY}"]

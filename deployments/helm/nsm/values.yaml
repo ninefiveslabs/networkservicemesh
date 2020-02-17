@@ -8,12 +8,15 @@ org: networkservicemesh
 tag: master
 pullPolicy: IfNotPresent
 
-forwardingPlane: vpp
+forwardingPlane: tf
 insecure: false
 preferredRemoteMechanism:
 
 vpp:
   image: vppagent-forwarder
+
+tf:
+  image: tf-forwarder
 
 kernel:
   image: kernel-forwarder

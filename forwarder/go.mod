@@ -5,6 +5,8 @@ go 1.13
 require (
 	github.com/gogo/protobuf v1.2.2-0.20190723190241-65acae22fc9d
 	github.com/golang/protobuf v1.3.3
+	github.com/natefinch/lumberjack v2.0.0+incompatible // indirect
+	github.com/networkservicemesh/networkservicemesh/contrail v0.0.0-00010101000000-000000000000
 	github.com/networkservicemesh/networkservicemesh/controlplane/api v0.3.0
 	github.com/networkservicemesh/networkservicemesh/forwarder/api v0.3.0
 	github.com/networkservicemesh/networkservicemesh/pkg v0.3.0
@@ -26,6 +28,7 @@ replace github.com/census-instrumentation/opencensus-proto v0.1.0-0.201812141439
 
 replace (
 	github.com/networkservicemesh/networkservicemesh => ../
+	github.com/networkservicemesh/networkservicemesh/contrail => ../contrail
 	github.com/networkservicemesh/networkservicemesh/controlplane => ../controlplane
 	github.com/networkservicemesh/networkservicemesh/controlplane/api => ../controlplane/api
 	github.com/networkservicemesh/networkservicemesh/forwarder => ./

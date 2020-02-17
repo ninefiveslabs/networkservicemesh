@@ -36,6 +36,9 @@ spec:
                 fieldRef:
                   fieldPath: status.podIP
           volumeMounts:
+            - name: tf-agent
+              mountPath: /var/lib/contrail/
+              mountPropagation: Bidirectional
             - name: workspace
               mountPath: /var/lib/networkservicemesh/
               mountPropagation: Bidirectional
@@ -68,6 +71,10 @@ spec:
             path: /var/lib/networkservicemesh
             type: DirectoryOrCreate
           name: workspace
+        - hostPath:
+            path: /var/lib/contrail
+            type: DirectoryOrCreate
+          name: tf-agent
         - hostPath:
             path: /run/spire/sockets
             type: DirectoryOrCreate
